@@ -27,11 +27,11 @@ router.use(session({
 
 // Routes
 router.get('/registration', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/registration.html'));
+    res.sendFile(path.join(__dirname, '../../views/registration.html'));
 })
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/login.html'));
+    res.sendFile(path.join(__dirname, '../../views/login.html'));
 })
 router.post('/regUser',async(req,res)=>{
     const userDetails = new User({
@@ -50,11 +50,11 @@ router.post('/regUser',async(req,res)=>{
 });
 
 router.get('/views/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/login.html'));
+    res.sendFile(path.join(__dirname, '../../views/login.html'));
 });
 
 router.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/login.html'));
+    res.sendFile(path.join(__dirname, '../../views/login.html'));
 });
 
 router.post('/loginReq', async (req, res) => {
@@ -80,9 +80,9 @@ router.post('/loginReq', async (req, res) => {
 
 router.get('/loggedin',function(req,res){
     if(req.session.loggedUser && Object.keys(req.session.loggedUser).length){
-        res.sendFile(path.join(__dirname, '../views/loggedin.html'));
+        res.sendFile(path.join(__dirname, '../../views/loggedin.html'));
     }else{
-        res.sendFile(path.join(__dirname, '../views/login.html'));
+        res.sendFile(path.join(__dirname, '../../views/login.html'));
     }
 });
 

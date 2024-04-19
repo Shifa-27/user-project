@@ -6,7 +6,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const nodeCache= require("node-cache");
-const userOpsRoute = require("./routes/users");
+const userOpsRoute = require("./authentication/routes/users");
 
 const app = express();
 app.use(express.json());
